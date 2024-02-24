@@ -1,0 +1,28 @@
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: server-app
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16.2-alpine3.19
+    container_name: postgres-db
+    restart: unless-stopped
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: 'app-db'
+      POSTGRES_PASSWORD: 'password'
+    ports:
+      - '5432:5432'
+    healthcheck:
+      test: pg_isready -d app-db -U postgres -h 127.0.0.1
+      interval: 1s
