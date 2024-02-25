@@ -5,8 +5,11 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: server-app
+    image: server-api
+    restart: unless-stopped
     volumes:
       - ./src:/app/src
+      - /src/app/node_modules
     ports:
       - "3000:3000"
     depends_on:
