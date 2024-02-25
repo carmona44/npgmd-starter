@@ -1,3 +1,5 @@
+> ⚠️ WARNING: This repository is under construction 🏗️
+
 # NPGMD Starter Pack
 
 NestJS + PostgreSQL + GraphQL + MikroORM + Docker Starter Pack
