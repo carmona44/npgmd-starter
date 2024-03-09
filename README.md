@@ -1,4 +1,5 @@
-> ⚠️ WARNING: This repository is under construction 🏗️
+> [!WARNING]
+> This repository is under construction 🏗️
 
 # NPGMD Starter Pack
 
