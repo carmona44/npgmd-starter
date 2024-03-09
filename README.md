@@ -10,7 +10,7 @@ NestJS + PostgreSQL + GraphQL + MikroORM + Docker Starter Pack
 
 ## Setup
 
-1. Install Docker Desktop if you haven't done it yet
+1. Install Docker Desktop if you haven't done it yet and open it
 1. Build Docker containers `docker-compose build --no-cache`
 
 ## Run the app (in the development mode)
